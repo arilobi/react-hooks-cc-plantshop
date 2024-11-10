@@ -1,150 +1,55 @@
-# Phase 2 Code Challenge: Plantsy
+# React Plant Shop
+# By Marion Okondo.
 
-## Demo
+This is a simple React application for a plant shop, where users can view plants, toggle whether they are in stock or not, search for a specific plant and manage the plant list. 
 
-Use this gif as an example of how the app should work.
+The app has a backend API to fetch the data from the db.json provided.
 
-![Demo GIF](https://curriculum-content.s3.amazonaws.com/phase-2/react-hooks-mock-code-challenge-plantshop/plantsy_demo.gif)
+## Instructions and Setup
 
-## Instructions
+1. Clone the repository to your local machine
+2. Run `npm install` in your terminal.
+3. Run `npm run server`. This will run your backend on port `6001`.
+4. In a new terminal, run `npm start`.
 
-Welcome to Plantsy! You've been tasked with building out some features for the
-admin side of a plant store. The designers have put together the components and
-CSS. Now it's up to you to bring the features to life by adding stateful logic
-as well as persisting data to the backend via our API.
+## Usage
 
-Your job will be to make our app work according to the user stories you will
-find the [Core Deliverables](#Core-Deliverables) section.
+- When you open the app in your browser, you will see a list of plants.
 
-## Setup
+- You can toggle the availability of each plant between "In Stock" and "Out of Stock"
 
-1. Run `npm install` in your terminal.
-2. Run `npm run server`. This will run your backend on port `6001`.
-3. In a new terminal, run `npm start`.
+- You can search for a specific plant on the search section.
 
-Make sure to open [http://localhost:6001/plants](http://localhost:6001/plants)
-in the browser to verify that your backend is working before you proceed!
+- You can add a plant, an image and a price of your choice.
+
+## Core Features
+
+1. Toggle Stock Status - the user can switch between "In Stock" and "Out of Stock"
+
+2. Add a plant - the user can add a plant of their choice, an image and a price point.
+
+3. Search for a plant - the user can search for a specific plant.
+
+4. API Integration - The app uses an API for fetching the plant data from db.json.
+
+## Dependencies
+
+- React 
+- API 
 
 ## Endpoints
 
+The app has the following API endpoints: 
+
+- GET/api/plants that fetches the list of plants.
+
 The base URL for your backend is: `http://localhost:6001`
 
-## Core Deliverables
+## Technologies used
+HTML, CSS, GIT, REACTJS, JAVASCRIPT
 
-As a user:
+## Support and contact details
 
-1. When the app starts, I can see all plants.
-2. I can add a new plant to the page by submitting the form.
-3. I can mark a plant as "sold out".
-4. I can search for plants by their name and see a filtered list of plants.
+email :: arinabulobi@gmail.com
 
-### Endpoints for Core Deliverables
-
-#### GET /plants
-
-Example Response:
-
-```json
-[
-  {
-    "id": 1,
-    "name": "Aloe",
-    "image": "./images/aloe.jpg",
-    "price": 15.99
-  },
-  {
-    "id": 2,
-    "name": "ZZ Plant",
-    "image": "./images/zz-plant.jpg",
-    "price": 25.98
-  }
-]
-```
-
-#### POST `/plants`
-
-Required Headers:
-
-```js
-{
-  "Content-Type": "application/json"
-}
-```
-
-Request Object:
-
-```json
-{
-  "name": "string",
-  "image": "string",
-  "price": number
-}
-```
-
-Example Response:
-
-```json
-{
-  "id": 1,
-  "name": "Aloe",
-  "image": "./images/aloe.jpg",
-  "price": 15.99
-}
-```
-
-## Advanced Deliverables
-
-These deliverables are not required to pass the code challenge, but if you have
-the extra time, or even after the code challenge, they are a great way to
-stretch your skills.
-
-You'll have to add additional elements for these features. Feel free to style
-them however you see fit!
-
-> Note: If you are going to attempt these advanced deliverables, please be sure
-> to have a working commit with all the Core Deliverables first!
-
-As a user:
-
-1. I can update the price of a plant and still see the updated price after
-   refreshing the page.
-2. I can delete a plant and it is still gone when I refresh the page.
-
-### Endpoints for Advanced Deliverables
-
-#### PATCH /plants/:id
-
-Required Headers:
-
-```js
-{
-  "Content-Type": "application/json"
-}
-```
-
-Request Object:
-
-```json
-{
-  "price": number
-}
-```
-
-Example Response:
-
-```json
-{
-  "id": 1,
-  "name": "Aloe",
-  "image": "./images/aloe.jpg",
-  "price": 16.99
-}
-```
-
-#### DELETE /plants/:id
-
-Example Response:
-
-```json
-{}
-```
+Copyright (c) 2024 Marion Okondo
