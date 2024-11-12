@@ -2,23 +2,56 @@ import React from "react";
 import NewPlantForm from "./NewPlantForm";
 import PlantList from "./PlantList";
 import Search from "./Search";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
-function PlantPage() {
-  const [plants, setPlants] = useState([]);
-  // Passing the  initial state as an empty string. 
+function PlantPage() {;
+
+    const [plants, setPlants] = useState([
+      {
+        id: 1,
+        name: "Aloe",
+        image: "./images/aloe.jpg",
+        price: 15.99,
+      },
+      {
+        id: 2,
+        name: "ZZ Plant",
+        image: "./images/zz-plant.jpg",
+        price: 25.98,
+      },
+      {
+        id: 3,
+        name: "Pilea peperomioides",
+        image: "./images/pilea.jpg",
+        price: 5.99,
+      },
+      {
+        id: 4,
+        name: "Pothos",
+        image: "./images/pothos.jpg",
+        price: 12.11,
+      },
+      {
+        id: 5,
+        name: "Jade",
+        image: "./images/jade.jpg",
+        price: 10.37,
+      },
+      {
+        id: 6,
+        name: "Monstera Deliciosa",
+        image: "./images/monstera.jpg",
+        price: 25.99,
+      },
+      {
+        id: 7,
+        name: "Fiddle Leaf Fig",
+        image: "./images/fiddle-leaf-fig.jpg",
+        price: 55,
+      },
+    ]);
+
   const [searchItem, setSearchItem] = useState("");
-
-  // Fetching all the plant data
-  useEffect(() => {
-    fetch("http://localhost:6001/plants")
-    .then((res)=> res.json())
-    .then(data =>(
-      // The list of plants are stored in plants state using setPlants.
-      setPlants(data)
-    ))
-    // The dependency effect runs only once when the component starts.
-  }, [])
 
   // Adding a new plant by using the spread operator.
   const handleAddPlant = (newPlant) => {
