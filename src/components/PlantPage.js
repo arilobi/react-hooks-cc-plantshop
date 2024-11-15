@@ -11,7 +11,7 @@ function PlantPage() {
 
   // Fetching all the plant data
   useEffect(() => {
-    fetch("http://localhost:6001/plants")
+    fetch("https://react-hooks-cc-plantshop-anwp.onrender.com/plants")
     .then((res)=> res.json())
     .then(data =>(
       // The list of plants are stored in plants state using setPlants.

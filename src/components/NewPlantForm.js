@@ -19,7 +19,7 @@ function NewPlantForm({ onAddPlant }) {
   };
 
   // Fetching the data but using a POST request to add a new plant to the backend.
-  fetch("http://localhost:6001/plants", {
+  fetch("https://react-hooks-cc-plantshop-anwp.onrender.com/plants", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
